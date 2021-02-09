@@ -1,0 +1,36 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.sections {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.section.one {
+  background-color: red;
+}
+
+.section.two {
+  background-color: blue;
+}
+
+.section.three {
+  background-color: yellow;
+}
+
+.section.four {
+  background-color: green;
+}
