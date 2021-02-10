@@ -1,11 +1,11 @@
-p {
+/*p {
   margin: 0;
   padding: 0;
-}
+}*/
 
-html, body {
+/*html, body {
   height: 100%;
-}
+}*/
 
 .sections {
   width: 100%;
@@ -33,4 +33,31 @@ html, body {
 
 .section.four {
   background-color: green;
+}
+
+.left-content {
+  position: fixed;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+}
+
+.right-content {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 300px;
+  height: 100%;
+}
+
+.left-content-b {
+  position: fixed;
+  padding: 30px;
+}
+
+.right-content-b {
+  position: absolute;
+  width: 100%;
+  left: 300px;
+  height: 100%;
 }
