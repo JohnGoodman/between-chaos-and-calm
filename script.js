@@ -16,6 +16,6 @@ $(function () { // wait for document ready
 			})
 			.setPin(".sections")
 			.setTween(wipeAnimation)
-			.addIndicators() // add indicators (requires plugin)
+			// .addIndicators() // add indicators (requires plugin)
 			.addTo(controller);
 	});
