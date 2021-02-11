@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Between Chaos And Calm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<!--   <link rel="stylesheet" href="./style.css"> -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <div class='row'>
+    <div class='column'>
+      <div class='left-column'>
+        <h1>Between Chaos And Calm</h1>
+        <h2>John Goodman</h2>
+        <a href='https://www.instagram.com/betweenchaosandcalm/' title='Follow On Instagram'>
+          <img src='https://cdn.iconscout.com/icon/free/png-256/instagram-233-896451.png' style='width:30px;' />
+        </a>
+      </div>
+    </div>
+    <div class='right-column'>
+      <div class="panels">
+
+        <section class="panel">
+        </section>
+
+        <section class="panel">
+        </section>
+
+        <section class="panel">
+        </section>
+
+        <section class="panel">
+        </section>
+
+        <section class="panel">
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<style>
+
+h1 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+/*font-family: 'IBM Plex Sans', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+
+.panel {
+  top: 0;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  position: sticky;
+}
+
+.panel:nth-child(1) {
+  z-index: 1;
+}
+.panel:nth-child(2) {
+  z-index: 2;
+}
+.panel:nth-child(3) {
+  z-index: 3;
+}
+.panel:nth-child(4) {
+  z-index: 4;
+}
+.panel:nth-child(5) {
+  z-index: 5;
+}
+
+
+.panel {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.panel:nth-child(1) {
+  background-image: url("./images/abstract-blue-drips-on-white.jpg");
+}
+.panel:nth-child(2) {
+  background-image: url("./images/portrait-woman-yellow.jpg");
+}
+.panel:nth-child(3) {
+  background-image: url("./images/abstract-red-yellow-drips-square.jpg");
+}
+.panel:nth-child(4) {
+  background-image: url("./images/abstract-green-streaks-boiling.jpg");
+}
+.panel:nth-child(5) {
+  background-image: url("./images/abstract-gold-falling-stars.jpg");
+}
+
+.panel-content {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 4;
+}
+
+.left-column {
+  position: fixed;
+  padding: 30px;
+  /*height: 100px;*/
+}
+
+</style>
