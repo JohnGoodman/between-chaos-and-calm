@@ -41,6 +41,9 @@
         <section class="panel">
         </section>
 
+        <section class="panel">
+        </section>
+
       </div>
     </div>
   </div>
@@ -72,6 +75,17 @@ h2 {
 
   .column {
     height: 150px;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .panel {
+    top: 150px !important;
+  }
+
+  .panel:nth-child(6) {
+    display: block !important;
+    border-top: 1px solid #A7A7A7;
   }
 
   h1 {
@@ -94,41 +108,34 @@ h2 {
   position: sticky;
 }
 
-.panel:nth-child(1) {
-  z-index: 1;
-}
-.panel:nth-child(2) {
-  z-index: 2;
-}
-.panel:nth-child(3) {
-  z-index: 3;
-}
-.panel:nth-child(4) {
-  z-index: 4;
-}
-.panel:nth-child(5) {
-  z-index: 5;
-}
-
-
 .panel {
   background-repeat: no-repeat;
   background-size: contain;
 }
 .panel:nth-child(1) {
+  z-index: 1;
   background-image: url("./images/abstract-blue-drips-on-white.jpg");
 }
 .panel:nth-child(2) {
+  z-index: 2;
   background-image: url("./images/portrait-woman-yellow.jpg");
 }
 .panel:nth-child(3) {
+  z-index: 3;
   background-image: url("./images/abstract-red-yellow-drips-square.jpg");
 }
 .panel:nth-child(4) {
+  z-index: 4;
   background-image: url("./images/abstract-green-streaks-boiling.jpg");
 }
 .panel:nth-child(5) {
+  z-index: 5;
   background-image: url("./images/abstract-gold-falling-stars.jpg");
+}
+.panel:nth-child(6) {
+  z-index: 6;
+  background: white;
+  display: none;
 }
 
 .row {
