@@ -109,7 +109,28 @@ h2 {
 }
 
 
-@media (max-width: 650px) {
+
+
+
+
+/*@media (max-width: 650px) {*/
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+
+/* ----------- iPhone X ----------- */
+@media only screen
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
 
   h1 {
     font-size: 4vw;
@@ -161,8 +182,14 @@ h2 {
   }
 
   .arrows {
-    bottom: 20px !important;
+    bottom: 50px !important;
     top: initial !important;
+    right: 100px !important;
+  }
+
+  .arrows div {
+    font-size: 4vw !important;
+    padding: 30px !important;
   }
 
 }
