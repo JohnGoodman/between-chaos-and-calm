@@ -33,23 +33,14 @@
 
       <div class="panels">
 
-        <section class="panel">
-        </section>
-
-        <section class="panel">
-        </section>
-
-        <section class="panel">
-        </section>
-
-        <section class="panel">
-        </section>
-
-        <section class="panel">
-        </section>
-
-        <section class="panel">
-        </section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
+        <section class="panel"></section>
 
       </div>
     </div>
@@ -94,11 +85,6 @@ h2 {
     top: 150px !important;
   }
 
-  .panel:nth-child(6) {
-    display: block !important;
-    border-top: 1px solid #A7A7A7;
-  }
-
   .arrows {
     bottom: 20px !important;
     top: initial !important;
@@ -112,6 +98,33 @@ h2 {
   h2 {
     font-weight: 200;
     font-size: 3vw;
+  }
+
+
+  .panel:nth-child(1) {
+    background-image: url("./images/portrait-woman-yellow-desktop.jpg");
+  }
+  .panel:nth-child(2) {
+    background-image: url("./images/abstract-blue-drips-on-white-mobile.jpg");
+  }
+  .panel:nth-child(3) {
+    background-image: url("./images/abstract-gold-falling-stars-mobile.jpg");
+  }
+  .panel:nth-child(4) {
+    background-image: url("./images/portrait-old-man-mobile.jpg");
+  }
+  .panel:nth-child(5) {
+    background-image: url("./images/abstract-red-yellow-drips-square-mobile.jpg");
+  }
+  .panel:nth-child(6) {
+    background-image: url("./images/portrait-woman-dark-mobile.jpg");
+  }
+  .panel:nth-child(7) {
+    background-image: url("./images/abstract-two-hearts-mobile.jpg");
+  }
+  .panel:nth-child(8) {
+    display: block !important;
+    border-top: 1px solid #A7A7A7;
   }
 
 }
@@ -129,28 +142,39 @@ h2 {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+
+
 .panel:nth-child(1) {
   z-index: 1;
-  background-image: url("./images/abstract-blue-drips-on-white.jpg");
+  background-image: url("./images/portrait-woman-yellow-desktop.jpg");
 }
 .panel:nth-child(2) {
   z-index: 2;
-  background-image: url("./images/portrait-woman-yellow.jpg");
+  background-image: url("./images/abstract-blue-drips-on-white-desktop.jpg");
 }
 .panel:nth-child(3) {
   z-index: 3;
-  background-image: url("./images/abstract-red-yellow-drips-square.jpg");
+  background-image: url("./images/abstract-gold-falling-stars-desktop.jpg");
 }
 .panel:nth-child(4) {
   z-index: 4;
-  background-image: url("./images/abstract-green-streaks-boiling.jpg");
+  background-image: url("./images/portrait-old-man-desktop.jpg");
 }
 .panel:nth-child(5) {
   z-index: 5;
-  background-image: url("./images/abstract-gold-falling-stars.jpg");
+  background-image: url("./images/abstract-red-yellow-drips-square-desktop.jpg");
 }
 .panel:nth-child(6) {
   z-index: 6;
+  background-image: url("./images/portrait-woman-dark-desktop.jpg");
+}
+.panel:nth-child(7) {
+  z-index: 7;
+  background-image: url("./images/abstract-two-hearts-desktop.jpg");
+}
+.panel:nth-child(8) {
+  z-index: 8;
   background: white;
   display: none;
 }
@@ -212,6 +236,8 @@ h2 {
     panel_3_scroll_position = window_height * 2;
     panel_4_scroll_position = window_height * 3;
     panel_5_scroll_position = window_height * 4;
+    panel_6_scroll_position = window_height * 5;
+    panel_7_scroll_position = window_height * 6;
   }
 
   function trackCurrentPanel(){
@@ -229,6 +255,10 @@ h2 {
       current_panel = 5;
     }else if (current_y_scroll_position >= (window_height * 5) && current_y_scroll_position < (window_height * 6)){
       current_panel = 6;
+    }else if (current_y_scroll_position >= (window_height * 6) && current_y_scroll_position < (window_height * 7)){
+      current_panel = 7;
+    }else if (current_y_scroll_position >= (window_height * 7) && current_y_scroll_position < (window_height * 8)){
+      current_panel = 8;
     };
 
     return current_panel;
@@ -244,7 +274,7 @@ h2 {
 
   function nextPanel(){
     next_panel = current_panel + 1;
-    if ( next_panel > 5 ) { next_panel = 5 };
+    if ( next_panel > 7 ) { next_panel = 7 };
 
     panel_variable = 'panel_' + next_panel + '_scroll_position';
     document.documentElement.scrollTop = eval(panel_variable);
@@ -258,6 +288,8 @@ h2 {
   var panel_3_scroll_position = window_height * 2;
   var panel_4_scroll_position = window_height * 3;
   var panel_5_scroll_position = window_height * 4;
+  var panel_6_scroll_position = window_height * 5;
+  var panel_7_scroll_position = window_height * 6;
 
   window.onscroll = function() {trackCurrentPanel()};
   window.onresize = function() {trackBrowserSize()};
