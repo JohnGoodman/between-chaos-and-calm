@@ -27,8 +27,8 @@
     <div class='right-column'>
 
       <div class='arrows'>
-        <div class="fa fa-long-arrow-up" title='scroll up to next image'></div>
-        <div class="fa fa-long-arrow-down" title='scroll down to next image'></div>
+        <div class="fa fa-long-arrow-up" title='scroll up to next image' onclick='previousPanel()'></div>
+        <div class="fa fa-long-arrow-down" title='scroll down to next image' onclick='nextPanel()'></div>
       </div>
 
       <div class="panels">
@@ -191,9 +191,55 @@ h2 {
 
 }
 
-
 </style>
 
+<script type="text/javascript">
+
+  function trackCurrentPanel(){
+    current_y_scroll_position = window.pageYOffset;
+
+    if (current_y_scroll_position <= window_height) {
+      current_panel = 1;
+    } else if (current_y_scroll_position > window_height && current_y_scroll_position <= (window_height * 2)){
+      current_panel = 2;
+    } else if (current_y_scroll_position > (window_height * 2) && current_y_scroll_position <= (window_height * 3)){
+      current_panel = 3;
+    }else if (current_y_scroll_position > (window_height * 3) && current_y_scroll_position <= (window_height * 4)){
+      current_panel = 4;
+    }else if (current_y_scroll_position > (window_height * 4) && current_y_scroll_position <= (window_height * 5)){
+      current_panel = 5;
+    }else if (current_y_scroll_position > (window_height * 5) && current_y_scroll_position <= (window_height * 6)){
+      current_panel = 6;
+    };
+
+    return current_panel;
+  }
+
+  function previousPanel(){
+    next_panel = current_panel + 1;
+    console.log('previous panel: ' + next_panel);
+    document.documentElement.scrollTop = document.body.scrollTop = panel_3_scroll_position;
+  }
+
+  function nextPanel(){
+    previous_panel = current_panel - 1;
+    console.log('previous panel: ' + previous_panel);
+    document.documentElement.scrollTop = document.body.scrollTop = panel_1_scroll_position;
+  }
+
+  // var y_scroll_position = window.pageYOffset;
+  var window_height = window.innerHeight;
+
+  var current_panel = 1;
+
+  var panel_1_scroll_position = 0;
+  var panel_2_scroll_position = window_height;
+  var panel_3_scroll_position = window_height * 2;
+
+  window.onscroll = function() {trackCurrentPanel()};
+
+
+</script>
 
 
 
