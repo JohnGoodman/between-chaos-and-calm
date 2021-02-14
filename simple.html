@@ -6,7 +6,7 @@
   <!-- Basics -->
   <title>Between Chaos And Calm</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -18,7 +18,8 @@
 
 html {
   scroll-behavior: smooth;
-  /*padding: env(safe-area-inset);*/
+  padding: env(safe-area-inset);
+  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
 }
 
 @supports(padding:max(0px)) {
