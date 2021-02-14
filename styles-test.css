@@ -1,0 +1,191 @@
+html {
+  scroll-behavior: smooth;
+  padding: env(safe-area-inset);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 400;
+  font-size: 1.75vw;
+  line-height: 1;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 100;
+  font-size: 1.5vw;
+  line-height: 1;
+}
+
+.panel {
+  top: 0;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  /*position: sticky;*/
+  background-color: #fff;
+}
+
+.panel {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.panel:nth-child(1) {
+  z-index: 1;
+  background-image: url("./images/portrait-woman-yellow-desktop.jpg");
+}
+.panel:nth-child(2) {
+  z-index: 2;
+  background-image: url("./images/abstract-blue-drips-on-white-desktop.jpg");
+}
+.panel:nth-child(3) {
+  z-index: 3;
+  background-image: url("./images/abstract-gold-falling-stars-desktop.jpg");
+}
+.panel:nth-child(4) {
+  z-index: 4;
+  background-image: url("./images/portrait-old-man-desktop.jpg");
+}
+.panel:nth-child(5) {
+  z-index: 5;
+  background-image: url("./images/abstract-red-yellow-drips-square-desktop.jpg");
+}
+.panel:nth-child(6) {
+  z-index: 6;
+  background-image: url("./images/portrait-woman-dark-desktop.jpg");
+}
+.panel:nth-child(7) {
+  z-index: 7;
+  background-image: url("./images/abstract-two-hearts-desktop.jpg");
+}
+.panel:nth-child(8) {
+  z-index: 8;
+  background: white;
+  display: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 5;
+}
+
+.title {
+  position: fixed;
+  padding: 30px;
+}
+
+.arrows {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  z-index: 1000;
+  width: 20px;
+
+}
+
+.arrows div {
+  color: #8D8D8D;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.arrows div:hover {
+  color: #3E3E3E;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+
+/* ----------- iPhone X ----------- */
+@media only screen
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait),
+
+  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+  (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait),
+
+  (max-width: 650px) {
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-weight: 200;
+    font-size: 3vw;
+  }
+
+  .row {
+    display: block !important;
+  }
+
+  .column {
+    height: 150px;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .panel {
+    top: 150px !important;
+  }
+
+  .panel:nth-child(1) {
+    background-image: url("./images/portrait-woman-yellow-desktop.jpg");
+  }
+  .panel:nth-child(2) {
+    background-image: url("./images/abstract-blue-drips-on-white-mobile.jpg");
+  }
+  .panel:nth-child(3) {
+    background-image: url("./images/abstract-gold-falling-stars-mobile.jpg");
+  }
+  .panel:nth-child(4) {
+    background-image: url("./images/portrait-old-man-mobile.jpg");
+  }
+  .panel:nth-child(5) {
+    background-image: url("./images/abstract-red-yellow-drips-square-mobile.jpg");
+  }
+  .panel:nth-child(6) {
+    background-image: url("./images/portrait-woman-dark-mobile.jpg");
+  }
+  .panel:nth-child(7) {
+    background-image: url("./images/abstract-two-hearts-mobile.jpg");
+  }
+  .panel:nth-child(8) {
+    display: block !important;
+    border-top: 1px solid #A7A7A7;
+  }
+
+  .arrows {
+    bottom: 50px !important;
+    top: initial !important;
+    right: 50px !important;
+  }
+
+  .arrows div {
+    font-size: 4vw !important;
+    padding: 30px !important;
+  }
+
+}
