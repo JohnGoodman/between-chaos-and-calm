@@ -152,12 +152,17 @@ h2 {
     z-index: 1000;
   }
 
+  .panels {
+    height: 50vh;
+    background-color: yellow;
+  }
+
   .panel {
     top: 150px !important;
   }
 
   .panel:nth-child(1) {
-    background-image: url("./images/portrait-woman-yellow-desktop.jpg");
+    background-image: url("./images/portrait-woman-yellow-mobile.jpg");
   }
   .panel:nth-child(2) {
     background-image: url("./images/abstract-blue-drips-on-white-mobile.jpg");
