@@ -69,7 +69,6 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  background-color: green; /*debug*/
 }
 
 .column {
@@ -84,7 +83,6 @@ h2 {
   flex-direction: column;
   flex-basis: 100%;
   flex: 5;
-  background-color: blue; /*debug*/
 }
 
 .left-column {
