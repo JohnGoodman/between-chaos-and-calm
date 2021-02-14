@@ -6,7 +6,7 @@
   <!-- Basics -->
   <title>Between Chaos And Calm</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:url" content="https://www.betweenchaosandcalm.com/">
@@ -25,26 +25,146 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./style.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
 
-  <!-- Script -->
-  <script type="text/javascript" src="./script.js"></script>
-
   <!-- Favicon -->
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
+<style>
+
+html {
+  scroll-behavior: smooth;
+  padding: env(safe-area-inset);
+  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+}
+
+@supports(padding:max(0px)) {
+    body, header, footer {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 400;
+  /*font-size: 1vw;
+  line-height: 1;*/
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;;
+  font-weight: 100;
+  /*font-size: 1.25vw;
+  line-height: 1;*/
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.column-title {
+  border-right: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.column-images div {
+  width: 100%;
+  height: 50vh;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.column-images div:nth-child(1) {
+  background-image: url("./images/portrait-woman-yellow-desktop.jpg");
+}
+.column-images div:nth-child(2) {
+  background-image: url("./images/abstract-blue-drips-on-white-desktop.jpg");
+}
+.column-images div:nth-child(3) {
+  background-image: url("./images/abstract-gold-falling-stars-desktop.jpg");
+}
+.column-images div:nth-child(4) {
+  background-image: url("./images/portrait-old-man-desktop.jpg");
+}
+.column-images div:nth-child(5) {
+  background-image: url("./images/abstract-red-yellow-drips-square-desktop.jpg");
+}
+.column-images div:nth-child(6) {
+  background-image: url("./images/portrait-woman-dark-desktop.jpg");
+}
+.column-images div:nth-child(7) {
+  background-image: url("./images/abstract-two-hearts-desktop.jpg");
+}
+
+.title {
+  padding: 30px;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  .column-title {
+    flex: 1;
+  }
+
+  .column-images {
+    flex: 2;
+  }
+
+  .column-images div {
+    height: 100vh;
+    background-position: left;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+  .column-title {
+    flex: 1;
+  }
+
+  .column-images {
+    flex: 3;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  /*.column-images div:nth-child(1) {
+    background-image: url("./images/portrait-woman-yellow-mobile.jpg");
+  }*/
+
+}
+
+</style>
+
+
 
 </head>
 <body>
+
+<div class='page-wrapper'>
+
   <div class='row'>
-    <!-- <div class='column'> -->
-    <div class='left-column'>
+    <div class='column column-title'>
       <div class='title'>
         <h1>Between Chaos And Calm</h1>
         <h2>John Goodman</h2>
@@ -53,28 +173,20 @@
         </a>
       </div>
     </div>
-    <!-- </div> -->
-    <div class='right-column'>
-
-      <div class='arrows'>
-        <div class="fa fa-long-arrow-up" title='scroll up to next image' onclick='previousPanel()'></div>
-        <div class="fa fa-long-arrow-down" title='scroll down to next image' onclick='nextPanel()'></div>
-      </div>
-
-      <div class="panels">
-
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-        <section class="panel"></section>
-
-      </div>
+    <div class='column column-images'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
   </div>
+
+</div>
+
+
 
 </body>
 </html>
