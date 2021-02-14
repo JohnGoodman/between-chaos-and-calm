@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  padding: env(safe-area-inset);
 }
 
 h1 {
@@ -86,8 +87,8 @@ h2 {
 }
 
 .left-column {
-  /*position: fixed;*/
-  padding: 30px;
+  /*position: fixed;
+  padding: 30px;*/
 }
 
 .arrows {
