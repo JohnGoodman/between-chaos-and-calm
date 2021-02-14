@@ -86,8 +86,8 @@ h2 {
 }
 
 .left-column {
-  position: fixed;
-  /*padding: 30px;*/  /*debug*/
+  /*position: fixed;*/
+  padding: 30px;
 }
 
 .arrows {
